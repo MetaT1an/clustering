@@ -101,11 +101,28 @@ def k_means(dat):
                 go_on = True
 
 
-# module test
+def save_result(path):
+    """
+    :param path: where to store the result after computation
+    :return: None
+    this method will store the cluster result generated after computation
+    with given file path
+    """
+    with open(path, "w") as f:
+        for i in K.cls_info:
+            cls_name = "cluster {}:\n".format(i)
+            f.write(cls_name)
+            for item in K.cls_info[i]["elements"]:
+                f.write("\t{}\n".format(item))
+
+    f.close()
+
+# # module test
 # if __name__ == '__main__':
-#     # dat = data.Data("/home/tc/Desktop/1.txt")
-#     # dat = data.Data("/home/tc/Desktop/data/Teaching_Assistant_Evaluation/tea.txt")
-#     dat = data.Data("/home/tc/Desktop/data/Contraceptive_Method_Choice/cmc.txt")
+#     import core.data as dt
+#     dt.data.txt_to_data("/home/tc/Desktop/data/Teaching_Assistant_Evaluation/tea.txt")
 #
-#     k_means(dat)
+#     k_means(dt.data)
+#     save_result("/home/tc/Desktop/data/test.txt")
+#
 #     print(K.run_time)

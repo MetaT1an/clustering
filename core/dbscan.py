@@ -148,11 +148,30 @@ def dbscan(dat):
     get_cls_info()  # readjust clusters info
 
 
-# module test
+def save_result(path, dat):
+    """
+    :param path: where to store the result after computation
+    :param dat: data set
+    :return: None
+
+    this method will store the cluster result generated after computation
+    with given file path
+    """
+    with open(path, "w") as f:
+        for i in D.clusters:
+            cls_name = "noise:\n" if i == -2 else "cluster {}\n".format(i)
+            f.write(cls_name)
+            for itm_idx in D.clusters[i]:
+                f.write("\t{}\n".format(dat.data_set[itm_idx]))
+
+    f.close()
+
+# # module test
 # if __name__ == '__main__':
-#     dat = data.Data()
+#     import core.data as dt
+#     dt.data.txt_to_data("/home/tc/Desktop/data/Teaching_Assistant_Evaluation/tea.txt")
 #     # dat = data.Data("/home/tc/Desktop/data/Teaching_Assistant_Evaluation/tea.txt")
 #     # dat = data.Data("/home/tc/Desktop/data/Contraceptive_Method_Choice/cmc.txt")
-#     dbscan(dat)
+#     dbscan(dt.data)
 #
-#     print(D.clusters)
+#     save_result("/home/tc/Desktop/data/test.txt", dt.data)
