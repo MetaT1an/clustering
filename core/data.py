@@ -56,7 +56,7 @@ class Data(object):
     # if data is visible, it can be displayed in 2-dimension graph
     def is_visible(self):
         visible_dim = ["int", "float"]
-        return self.data_size == 2 and self.dim_type[0] in visible_dim and self.dim_type[1] in visible_dim
+        return self.dim_type[0] in visible_dim and self.dim_type[1] in visible_dim and self.dim_size == 2
 
 
 # single pattern
@@ -65,5 +65,5 @@ data = Data()
 # module test
 # if __name__ == '__main__':
 #     data = Data()
-#     data.txt_to_data("/home/tc/Desktop/data/Teaching_Assistant_Evaluation/tea.txt")
-#     print(data.data_size, data.dim_size, data.dim_type)
+#     data.txt_to_data("../src/smile.txt")
+#     print(data.data_size, data.dim_size, data.dim_type, data.is_visible())
