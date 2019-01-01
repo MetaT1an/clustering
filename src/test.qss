@@ -1,0 +1,22 @@
+QGroupBox::title {
+    padding: 0 4px;
+}
+
+QCheckBox::indicator:unchecked {
+    image: url(./src/checkbox_blank.png);
+}
+
+QCheckBox::indicator:checked {
+    image: url(./src/checkbox_marked.png);
+}
+
+QProgressBar {
+    color: #fff;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+}
+
+QProgressBar::chunk {
+    background-color: #4CAF50;
+}
