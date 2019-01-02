@@ -72,6 +72,7 @@ def show_clusters(cls_nums1, cls_nums2, alg1_name, alg2_name, file_name):
 
     plt.xlabel("Clusters of " + file_name, fontsize=12)
     plt.ylabel("Number of items", fontsize=12)
+    plt.xticks(rotation=90)
 
     # second algorithm
     plt.subplot(1, 2, 2)
@@ -90,6 +91,7 @@ def show_clusters(cls_nums1, cls_nums2, alg1_name, alg2_name, file_name):
 
     plt.xlabel("Clusters of " + file_name, fontsize=12)
     plt.title("Clustering info of " + alg2_name)
+    plt.xticks(rotation=90)
 
     plt.show()
 
