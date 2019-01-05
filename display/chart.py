@@ -6,7 +6,7 @@ def show_time(file_name, t1, t2, alg1_name, alg2_name):
     """
     :param file_name: [string], name of data-file
     :param t1: [float], running time of the first algorithm
-    :param t2: [float], running time of the first algorithm
+    :param t2: [float], running time of the second algorithm
     :param alg1_name: [string], name of the first algorithm
     :param alg2_name: [string], name of the second algorithm
     :return: None, to open a new gui window to show the result in a chart

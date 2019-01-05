@@ -65,7 +65,10 @@ def file_dialog_events(file_path):
 
 
 def display_time():
-    ct.show_time(mw.get_file_name(), km.K.run_time, db.D.run_time, "k-means", "DBSCAN")
+    km_t = km.K.run_time if mw.is_km_selected() else 0
+    db_t = db.D.run_time if mw.is_db_selected() else 0
+
+    ct.show_time(mw.get_file_name(), km_t, db_t, "k-means", "DBSCAN")
 
 
 def display_result():

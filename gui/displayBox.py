@@ -7,7 +7,7 @@ class DisplayGroupBox(QGroupBox):
         self.layout = QGridLayout()
         self.time_btn = QPushButton("Running time")
         self.cls_info_btn = QPushButton("Clusters info")
-        self.vision_btn = QPushButton("Visualize")
+        self.vision_btn = QPushButton("Visualization")
         self.save_bth = QPushButton("Save result")
         self.save_file_dialog = QFileDialog()
 
@@ -54,11 +54,11 @@ class DisplayGroupBox(QGroupBox):
     def get_clsinfo_btn(self):
         return self.cls_info_btn
 
-
-if __name__ == '__main__':
-    import sys
-    app = QApplication(sys.argv)
-    x = DisplayGroupBox("xx")
-    x.show()
-
-    sys.exit(app.exec())
+# module test
+# if __name__ == '__main__':
+#     import sys
+#     app = QApplication(sys.argv)
+#     x = DisplayGroupBox("xx")
+#     x.show()
+#
+#     sys.exit(app.exec())
