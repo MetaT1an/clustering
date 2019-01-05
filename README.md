@@ -46,5 +46,5 @@ python main.py
 ![](https://ae01.alicdn.com/kf/HTB1TYHSaznuK1RkSmFP763uzFXaY.png)
 
 ## Caution
-- please make sure the data-files comply with [Formatting rules for data-file]()
-- please note that [The prerequisite for visualization]()
+- please make sure the data-files comply with [Formatting rules for data-file](https://github.com/TYC6/clustering/wiki/Formatting-rules-for-data-file)
+- please note that [The prerequisite for visualization](https://github.com/TYC6/clustering/wiki/Prerequisite-for-visualization)
